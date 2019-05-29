@@ -30,8 +30,9 @@
 #############################################################
 # Section 1: Imports
 #############################################################
-import os, getpass, time, socket, sys, Tkinter
+import os, getpass, time, socket, sys
 from github import Github
+from Tkinter import *
 
 
 
@@ -43,7 +44,6 @@ from github import Github
 username = getpass.getuser()
 homeDirectory = os.path.expanduser("~")
 hostname = socket.gethostname()
-
 
 #############################################################
 # Section 3: Functions
@@ -69,13 +69,26 @@ def usage():
 	This script will create a new project directory in a target directory and offer the user the option to open a new tab of the directory as well as open the project folder in Atom Text editor.
 '''
 
+def clicked():
+	lbl.configure(text="Button was clicked !!")
+
 #############################################################
 # Section 4: Main Body
 #############################################################
 
-alias = raw_input("Do you want to create an alias in ~/.bash_profile?")
+#alias = raw_input("Do you want to create an alias in ~/.bash_profile?")
 
-if alias = "y":
-	bashProfile = open("~/.bash_profile","w+")
-	if bashProfile:
-		pass
+#if alias = "y":
+#	bashProfile = open("~/.bash_profile","w+")
+#	if bashProfile:
+#		pass
+
+window = Tk()
+window.title("Welcome to Pyproj app")
+window.geometry('350x200')
+lbl = Label(window, text="Pyproj - Project Creator")
+uNameButton = Button(window, text="Get system Username: ")
+profilePath = Button(window, text="Get bash profile filepath: ")
+uNameButton.pack(padx=10)
+profilePath.pack(padx=10)
+window.mainloop()
