@@ -12,7 +12,47 @@
   - If no remote repository is indicated, you can still init the project folder to start tracking source code changes.
 
 ## Future Features
-  * Use GitHub APIv3 to create remote repositories for the user when creating new projects.
-  - Find new template files for each supported language and typical folder structure to emulate a more production-driven environment.
   + Add a config file where user can set their preferred text editor, terminal application, bash profile location, GitHub username, SSH key check (possibly), file location for each language or a preferred file hierarchy.
   * Utilize Tkinter to create a gui application with checkboxes and text boxes.
+  - Find new template files for each supported language and typical folder structure to emulate a more production-driven environment.
+    * Potential File structure for the new project templates:
+	 	```
+	 	├── .gitignore
+	 	├── .npmignore
+	 	├── LICENSE
+	 	├── README.md
+	 	├── bin
+	 	│   ├── script1
+	 	│   └── script2
+	 	├── docs
+	 	├── etc
+	 	│   └── user.cfg
+	 	├── requirements.txt
+	 	└── src
+		│   ├── lib
+		│      ├── templates
+		│      ├── ...various library files...
+		│	├── projectName.projectType
+		│	├── ...other source code...
+		```
+    * Potential File structure for php:
+  	 	```
+  	 	├── .gitignore
+  	 	├── .npmignore
+  	 	├── LICENSE
+  	 	├── README.md
+  	 	├── public_html
+  	 	│   ├── css
+  	 	│   └── img
+		│     ├── content
+		│     ├── layout
+		│   ├── js
+  	 	├── docs
+  	 	├── resources
+  	 	│   ├── config.php
+  	 	│   ├── user.cfg
+		│   ├── library
+  		│   ├── templates
+  	 	├── requirements.txt
+  		```
+    - I'd like to further template-ize each supported language by getting the comments, shebangs (if necessary) and various other housekeeping tasks and add them to a language-specific template, housed in: src/lib/templates.

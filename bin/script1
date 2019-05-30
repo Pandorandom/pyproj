@@ -1,0 +1,85 @@
+#!/usr/bin/env python
+#
+#
+#
+# TOOL NAME: Pyproj
+# WRITTEN BY: tacree
+# DATE: 05-28-2019
+# REV:
+# First Worked: 05-28-2019
+# Purpose: The purpose of this script is to offer a project creator application written in python over the original tool (bash).
+
+##########################################
+# Style Notes (W.I.P. Idea for a section):
+##########################################
+# Use camelCase notation for variables, etc.
+# Colored text output is done using ANSI escape codes. See:
+# https://en.wikipedia.org/wiki/ANSI_escape_code
+# for more info
+#
+#
+#
+#
+#
+#
+
+
+#
+# REV LIST:
+# BY:
+# DATE:
+# CHANGES MADE:
+#
+#
+#
+
+#############################################################
+# Section 1: Imports
+#############################################################
+
+
+
+
+
+
+
+
+
+#############################################################
+# Section 2: Misc. Variables
+#############################################################
+
+
+
+
+
+
+
+#############################################################
+# Section 3: Functions
+#############################################################
+
+
+
+
+
+
+
+
+
+
+#############################################################
+# Section 4: Main Body
+#############################################################
+
+
+
+
+
+
+
+
+
+
+
+#
