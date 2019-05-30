@@ -38,8 +38,8 @@
 #############################################################
 # Going to run command line args to create folders and such. Getpass will allow sudo/password entry to be protected, time in case there's any sleep timers necessary, and sys/socket for system info.
 import os, getpass, time, socket, sys
-from github import Github
-from Tkinter import *
+#from github import Github
+#from Tkinter import *
 from os import system, name
 
 

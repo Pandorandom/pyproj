@@ -12,9 +12,9 @@
   - If no remote repository is indicated, you can still init the project folder to start tracking source code changes.
 
 ## Future Features
-  + Add a config file where user can set their preferred text editor, terminal application, bash profile location, GitHub username, SSH key check (possibly), file location for each language or a preferred file hierarchy.
-  * Utilize Tkinter to create a gui application with checkboxes and text boxes.
-  - Find new template files for each supported language and typical folder structure to emulate a more production-driven environment.
+  + Add a config file where user can set their preferred text editor, terminal application, bash profile location, GitHub username and tokens for API work, etc.
+  * Utilize Tkinter to create a gui application with checkboxes and text boxes to accomplish the same tasks graphically.
+  - Implement below file structure, research more templates for other languages as needed.
     * Potential File structure for the new project templates:
 	 	```
 	 	├── .gitignore
@@ -56,3 +56,4 @@
   	 	├── requirements.txt
   		```
     - I'd like to further template-ize each supported language by getting the comments, shebangs (if necessary) and various other housekeeping tasks and add them to a language-specific template, housed in: src/lib/templates.
+	 + Get all licenses on GitHub and offer License creation through the tool.
