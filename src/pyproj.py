@@ -119,7 +119,7 @@ def makeProj( projectType, homeDirectory, projectName ):
 		projectType = "php"
 	elif isPhp == "n":
 		projectType = "mainTemplate"
-	else
+	else:
 		print("Please enter y for yes if this is a PHP application, or n for no if it is another language.")
 
 	makeProj = 'cp -R /resources/templates/%s %s/projects/%s' % (projectType, homeDirectory, projectName)
