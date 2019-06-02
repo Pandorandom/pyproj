@@ -170,10 +170,9 @@ def makeProj():
 			6. BSD 3-Clause "New"
 			7. GNU Affero General Public License 3.0
 			8. GNU General Public License v2.0
-			9. GNU Lesser General Public License v2.1
-			10. GNU Lesser General Public License v3.0
-			11. MIT License
-			12.The Unlicense (Be careful with this one!)
+			9. GNU Lesser General Public License v3.0
+			10. MIT License
+			11. The Unlicense (Be careful with this one!)
 			""")
 			licenseProj = raw_input("Which license would you like to apply? (This can be changed later): ")
 			#  Mozilla Public License 2.0
@@ -224,26 +223,20 @@ def makeProj():
 				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
 				licenseProj = False
 
-			#	GNU Lesser General Public License v2.1
-			elif licenseProj == "9":
-				licenseName = "GNU_LGPLv2.1"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
-				licenseProj = False
-
 			#	GNU Lesser General Public License v3.0
-			elif licenseProj == "10":
+		elif licenseProj == "9":
 				licenseName = "GNU_LGPLv3.0"
 				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
 				licenseProj = False
 
 			#	MIT License
-			elif licenseProj == "11":
+		elif licenseProj == "10":
 				licenseName = "MIT"
 				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
 				licenseProj = False
 
 			#	The Unlicense (Be careful with this one!)
-			elif licenseProj == "12":
+		elif licenseProj == "11":
 				licenseName = "Unlicense"
 				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
 				licenseProj = False
