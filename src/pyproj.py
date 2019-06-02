@@ -26,9 +26,12 @@
 
 #
 # REV LIST:
-# BY:
-# DATE:
-# CHANGES MADE:
+# BY: tacree
+# DATE: 06-02-2019
+# CHANGES MADE: Added license template files containing all the licenses supported via GitHub as of today.
+# Adding in a prompt for a license to be generated as well. Several of the licenses available
+# allow you to put in the year and your user/professional name. Going to do some find/replace
+# the dates and usernames.
 #
 #
 #
@@ -124,7 +127,7 @@ def gitInit(homeDirectory, projectName):
 		cd2Proj = raw_input("Would you like to switch to the new project directory? (y|n): ")
 		if cd2Proj == "y":
 			os.system('ttab cd %s/projects/%s/' % (homeDirectory, projectName))
-			sys.exit()
+			os.system('exit')
 		elif cd2Proj =="n":
 			print("Exiting pyproj creator.")
 			sys.exit()
@@ -153,6 +156,107 @@ def makeProj():
 	os.system('cp -R %s/src/lib/templates/%s/ %s/projects/%s' % (currentDir, projectType, homeDirectory, projectName))
 	os.system('cd %s/projects/%s && chmod 755 %s/projects/%s/src/ && chmod 755 %s/projects/%s/bin/' % (homeDirectory, projectName, homeDirectory, projectName, homeDirectory, projectName))
 
+
+	licenseProj = raw_input("Would you like to initialize this project with a GitHub-supported license? (y|n)")
+	if licenseProj =="y":
+		licenseProj = True
+		while licenseProj:
+			print ("""
+			1. Mozilla Public License 2.0
+			2. GNU General Public License v3.0
+			3. Apache License 2.0
+			4. Eclipse Public License 2.0
+			5. BSD 2-Clause "Simplified"
+			6. BSD 3-Clause "New"
+			7. GNU Affero General Public License 3.0
+			8. GNU General Public License v2.0
+			9. GNU Lesser General Public License v2.1
+			10. GNU Lesser General Public License v3.0
+			11. MIT License
+			12.The Unlicense (Be careful with this one!)
+			""")
+			licenseProj = raw_input("Which license would you like to apply? (This can be changed later): ")
+			#  Mozilla Public License 2.0
+			if licenseProj == "1":
+				licenseName = "MPL2.0"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	GNU General Public License v3.0
+			elif licenseProj == "2":
+				licenseName = "GNU_GPLv3"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	Apache License 2.0
+			elif licenseProj == "3":
+				licenseName = "apache2"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	Eclipse Public License 2.0
+			elif licenseProj == "4":
+				licenseName = "EclipsePublic2.0"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	BSD 2-Clause "Simplified"
+			elif licenseProj == "5":
+				licenseName = "BSD2-Clause"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	BSD 3-Clause "New"
+			elif licenseProj == "6":
+				licenseName = "BSD3-Clause"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	GNU Affero General Public License 3.0
+			elif licenseProj == "7":
+				licenseName = "GNU_Afferov3.0"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	GNU General Public License v2.0
+			elif licenseProj == "8":
+				licenseName = "GNU_GPLv2.0"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	GNU Lesser General Public License v2.1
+			elif licenseProj == "9":
+				licenseName = "GNU_LGPLv2.1"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	GNU Lesser General Public License v3.0
+			elif licenseProj == "10":
+				licenseName = "GNU_LGPLv3.0"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	MIT License
+			elif licenseProj == "11":
+				licenseName = "MIT"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			#	The Unlicense (Be careful with this one!)
+			elif licenseProj == "12":
+				licenseName = "Unlicense"
+				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				licenseProj = False
+
+			else:
+				print("Invalid option. Please review supported licenses and select a number from the list above.")
+				return;
+
+	elif licenseProj =="n":
+		print("No license added to the new project.")
+	else:
+		print("y or n, only, please.")
+
 	openProj = raw_input("Open the new project in Atom text editor? (y|n): ")
 	if openProj == "y":
 		#os.system('ttab cd %s/projects/%s/' % (homeDirectory, projectName))
@@ -162,7 +266,7 @@ def makeProj():
 		print('Project folder created at %s/projects/%s/' % (homeDirectory, projectName))
 		gitInit(homeDirectory, projectName)
 	else:
-		print("Y or n, only, please.")
+		print("y or n, only, please.")
 	return;
 
 	gitInit(homeDirectory, projectName)
