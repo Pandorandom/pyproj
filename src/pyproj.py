@@ -175,70 +175,72 @@ def makeProj():
 			11. The Unlicense (Be careful with this one!)
 			""")
 			licenseProj = raw_input("Which license would you like to apply? (This can be changed later): ")
+			licenseCopy = "'cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName)"
+
 			#  Mozilla Public License 2.0
 			if licenseProj == "1":
 				licenseName = "MPL2.0"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	GNU General Public License v3.0
 			elif licenseProj == "2":
 				licenseName = "GNU_GPLv3"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	Apache License 2.0
 			elif licenseProj == "3":
 				licenseName = "apache2"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	Eclipse Public License 2.0
 			elif licenseProj == "4":
 				licenseName = "EclipsePublic2.0"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	BSD 2-Clause "Simplified"
 			elif licenseProj == "5":
 				licenseName = "BSD2-Clause"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	BSD 3-Clause "New"
 			elif licenseProj == "6":
 				licenseName = "BSD3-Clause"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	GNU Affero General Public License 3.0
 			elif licenseProj == "7":
 				licenseName = "GNU_Afferov3.0"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	GNU General Public License v2.0
 			elif licenseProj == "8":
 				licenseName = "GNU_GPLv2.0"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	GNU Lesser General Public License v3.0
 		elif licenseProj == "9":
 				licenseName = "GNU_LGPLv3.0"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	MIT License
 		elif licenseProj == "10":
 				licenseName = "MIT"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			#	The Unlicense (Be careful with this one!)
 		elif licenseProj == "11":
 				licenseName = "Unlicense"
-				os.system('cp %s/src/lib/templates/LICENSES/%s %s/projects/%s/LICENSE' % (currentDir, licenseName, homeDirectory, projectName))
+				os.system(licenseCopy)
 				licenseProj = False
 
 			else:
